@@ -10,7 +10,7 @@ services:
       MYSQL_USER: my_user
       MYSQL_PASSWORD: my_password
     ports:
-      - "3306:3306"  # Mapea el puerto 3306 del contenedor al puerto 3306 de tu máquina local
+      - "3306:3306" 
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
@@ -24,7 +24,7 @@ services:
       PMA_USER: root
       PMA_PASSWORD: root_password
     ports:
-      - "8081:80"  # Mapea el puerto 80 del contenedor al puerto 8081 de tu máquina local
+      - "8081:80"
     depends_on:
       - mysql
     networks:
